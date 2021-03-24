@@ -30,6 +30,4 @@ public class DemoHelloApplication {
         return StrUtil.format("Hello, {}!", who);
     }
 
-
-
 }
