@@ -11,7 +11,8 @@
 
     <modules>
         <module>demo-sb01-hello</module>
-        <module>demo-sb01-hello</module>
+        <module>demo-sb02-hello</module>
+        <module>demo-sb03-properties</module>
 
     </modules>
 

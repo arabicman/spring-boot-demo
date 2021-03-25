@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo-sb01-hello" />
         <module name="demo-sb02-hello" />
+        <module name="demo-sb03-properties" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -15,6 +16,7 @@
       <module name="demo-hello" target="1.8" />
       <module name="demo-sb01-hello" target="8" />
       <module name="demo-sb02-hello" target="1.8" />
+      <module name="demo-sb03-properties" target="1.8" />
       <module name="spring-boot-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -23,6 +25,7 @@
       <module name="demo-01-hello" options="-parameters" />
       <module name="demo-hello" options="-parameters" />
       <module name="demo-sb02-hello" options="" />
+      <module name="demo-sb03-properties" options="" />
     </option>
   </component>
 </project>
