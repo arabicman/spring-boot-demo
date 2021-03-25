@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo-sb01-hello" />
-        <module name="demo-sb02-hello" />
+        <module name="demo-sb04-actuator" />
         <module name="demo-sb03-properties" />
+        <module name="demo-sb02-hello" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +18,7 @@
       <module name="demo-sb01-hello" target="8" />
       <module name="demo-sb02-hello" target="1.8" />
       <module name="demo-sb03-properties" target="1.8" />
+      <module name="demo-sb04-actuator" target="1.8" />
       <module name="spring-boot-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -26,6 +28,7 @@
       <module name="demo-hello" options="-parameters" />
       <module name="demo-sb02-hello" options="" />
       <module name="demo-sb03-properties" options="" />
+      <module name="demo-sb04-actuator" options="" />
     </option>
   </component>
 </project>

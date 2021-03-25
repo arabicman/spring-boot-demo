@@ -65,11 +65,42 @@ spring.profiles.active=dev
 
 另外，也可以写Configuration类并使用@Profile("dev")注解。
 
-## 04. 
 
 
+## 04. Spring Boot Actuator 使用
 
+Initializr: **Spring Web** + **Spring Security** + **Spring Actuator** 
 
+application.properties配置信息:
+
+``` properties
+#server
+server.port=8080
+server.servlet.context-path=/demo
+#spring
+# 若要访问端点信息，需要配置用户名和密码
+spring.security.user.name=admin
+spring.security.user.name=123456
+#management
+# 端点信息接口使用的端口，为了和主系统接口使用的端口进行分离
+management.server.port=8090
+management.server.servlet.context-path=/sys  #maybe base-path
+# 端点健康情况，默认值"never"，设置为"always"可以显示硬盘使用情况和线程情况
+management.endpoint.health.showdetails=always
+# 设置端点暴露的哪些内容，默认["health","info"]，设置"*"代表暴露所有可访问的端点
+management.endpoint.web.exposure.include='*'
+```
+
+访问：
+
+http://localhost:8090/sys/actuator/mappings
+
+http://localhost:8090/sys/actuator/beans
+
+## 参考
+
+- actuator文档：https://docs.spring.io/spring-boot/docs/2.0.5.RELEASE/reference/htmlsingle/#production-ready
+- 具体可以访问哪些路径，参考: https://docs.spring.io/spring-boot/docs/2.0.5.RELEASE/reference/htmlsingle/#production-ready-endpoints
 
 
 
