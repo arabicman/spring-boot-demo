@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/demo-sb02-hello/pom.xml" />
         <option value="$PROJECT_DIR$/demo-sb03-properties/pom.xml" />
         <option value="$PROJECT_DIR$/demo-sb04-actuator/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-sb05-admin-client/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-sb06-admin-server/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

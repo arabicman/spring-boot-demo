@@ -9,5 +9,9 @@
     <file url="file://$PROJECT_DIR$/demo-sb03-properties/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-sb04-actuator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-sb04-actuator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-sb05-admin-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-sb05-admin-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-sb06-admin-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-sb06-admin-server/src/main/resources" charset="UTF-8" />
   </component>
 </project>

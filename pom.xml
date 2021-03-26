@@ -14,6 +14,8 @@
         <module>demo-sb02-hello</module>
         <module>demo-sb03-properties</module>
         <module>demo-sb04-actuator</module>
+        <module>demo-sb05-admin-client</module>
+        <module>demo-sb06-admin-server</module>
 
     </modules>
 
