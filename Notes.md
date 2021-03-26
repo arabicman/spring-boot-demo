@@ -6,7 +6,7 @@
 
 (2)新建一个module，并选择spring-boot-demo为parent.
 
-(3)使用module中的pom.xml文件用作模板，配置后续使用Spring Initializr新建module中的pom.xml
+(3)【重要:每次必做】使用module中的pom.xml文件用作模板，配置后续使用Spring Initializr新建module中的pom.xml
 
 	*  复制<parent></parent>标签中的内容
 	*  删除<groupId></groupId>标签
@@ -108,7 +108,7 @@ http://localhost:8090/sys/actuator/beans
 
 ## 05. Spring Boot Admin Client的使用
 
-(1) Initializr: **Spring Web** + **Spring Security** + **Admin Client**+**Actuator**
+(1) Initializr: **Spring Web** + **Spring Security** + **Admin Client ** + **Actuator**
 
 (2) application.properties
 
@@ -120,8 +120,8 @@ server.servlet.context-path=/demo
 spring.application.name=spring-boot-demo-admin-client
 spring.security.user.name=admin
 spring.security.user.password=123456
-# Spring Boot Admin 服务端地址
-spring.boot.admin.client.url="http://localhost:8000/"
+# Spring Boot Admin 服务端地址（yml加双引号“”）
+spring.boot.admin.client.url=http://localhost:8000/
 # 客户端端点信息的安全认证信息
 spring.boot.admin.client.username=${spring.security.user.name}
 spring.boot.admin.client.password=${spring.security.user.password}
@@ -130,8 +130,8 @@ spring.boot.admin.client.instance.metadate.user.password=${spring.security.user.
 #management
 # 端点健康情况，默认值"never"，设置为"always"可以显示硬盘使用情况和线程情况
 management.endpoint.health.show-details=always
-# 设置端点暴露的哪些内容，默认["health","info"]，设置"*"代表暴露所有可访问的端点
-management.endpoints.web.exposure.include='*'
+# 设置端点暴露的哪些内容，默认["health","info"]，设置"*"代表暴露所有可访问的端点（yml加双引号“”）
+management.endpoints.web.exposure.include=*
 ```
 
 (3)写一个简单的IndexController
@@ -178,9 +178,39 @@ spring.security.user.password=123456
     }
 ```
 
-(5) 添加config配置类
+(5) 添加Config配置类
+
+``` java
+@Configuration
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        SavedRequestAwareAuthenticationSuccessHandler successHandler
+                = new SavedRequestAwareAuthenticationSuccessHandler();
+        successHandler.setTargetUrlParameter("redirectTo");
+        successHandler.setDefaultTargetUrl("/");
+
+        http.authorizeRequests()
+                .antMatchers("/assets/**").permitAll()
+                .antMatchers("/login").permitAll()
+                .anyRequest().authenticated().and()
+                .formLogin().loginPage("/login")
+                .successHandler(successHandler).and()
+                .logout().logoutUrl("/logout").and()
+                .httpBasic().and()
+                .csrf()
+                .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+                .ignoringAntMatchers(
+                        "/instances",
+                        "/actuator/**"
+                );
+    }
+}
+```
 
 详细参考： https://www.jianshu.com/p/1749f04105fb
+
+
 
 ## 07. 
 
