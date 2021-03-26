@@ -264,7 +264,31 @@ public class SpringBootDemoLogbackApplication {
 
 
 
-## 08. 
+## 08. Spring Boot AOP日志
+
+(1) Initializr: Spring WEB + Spring AOP + Lombok + Hutools + UserAgentUtils。
+
+(2) 复制07.里面的application.properties 和 logback-spring.xml并粘贴到resources中。
+
+(3) 创建aspectj package 并在其中创建AopLog.java
+
+(4) 创建controller package并创建TestController.java
+
+(5) 使用postman测试api	
+
+```json
+Step1: GET  http://localhost:8080/demo/test?who=xxxxxxx
+
+Step2: POST http://localhost:8080/demo/testJson
+BODY-JSON:
+          { 
+              "data" : 
+              { 
+                  "field1" : "value1", 
+                  "field2" : "value2"
+              }
+          }
+```
 
 
 

@@ -1,0 +1,30 @@
+2021-03-26 16:20:53,655 [main] INFO  [com.demo.logaop.DemoSb08LogAopApplication] StartupInfoLogger.java:55 - Starting DemoSb08LogAopApplication using Java 1.8.0_231 on LJX-Mac.local with PID 31217 (/Users/lijx/Documents/JAVA_Project/spring-boot-demo/demo-sb08-log-aop/target/classes started by lijx in /Users/lijx/Documents/JAVA_Project/spring-boot-demo)
+2021-03-26 16:20:53,658 [main] INFO  [com.demo.logaop.DemoSb08LogAopApplication] SpringApplication.java:662 - No active profile set, falling back to default profiles: default
+2021-03-26 16:20:54,438 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2021-03-26 16:20:54,445 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-03-26 16:20:54,445 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-03-26 16:20:54,488 [main] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/demo]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-03-26 16:20:54,488 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:289 - Root WebApplicationContext: initialization completed in 789 ms
+2021-03-26 16:20:54,650 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-26 16:20:54,822 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8080 (http) with context path '/demo'
+2021-03-26 16:20:54,829 [main] INFO  [com.demo.logaop.DemoSb08LogAopApplication] StartupInfoLogger.java:61 - Started DemoSb08LogAopApplication in 1.539 seconds (JVM running for 2.237)
+2021-03-26 16:22:40,132 [http-nio-8080-exec-2] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/demo]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-26 16:22:40,133 [http-nio-8080-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2021-03-26 16:22:40,134 [http-nio-8080-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 1 ms
+2021-03-26 16:23:33,688 [http-nio-8080-exec-3] WARN  [o.s.w.s.m.support.DefaultHandlerExceptionResolver] AbstractHandlerExceptionResolver.java:207 - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+2021-03-26 16:25:36,177 [http-nio-8080-exec-6] INFO  [com.demo.logaop.controller.TestController] TestController.java:28 - {"data":{"field1":"value1","field2":"value2"}}
+2021-03-26 16:43:28,887 [SpringContextShutdownHook] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-26 16:43:55,023 [main] INFO  [com.demo.logaop.DemoSb08LogAopApplication] StartupInfoLogger.java:55 - Starting DemoSb08LogAopApplication using Java 1.8.0_231 on LJX-Mac.local with PID 31469 (/Users/lijx/Documents/JAVA_Project/spring-boot-demo/demo-sb08-log-aop/target/classes started by lijx in /Users/lijx/Documents/JAVA_Project/spring-boot-demo)
+2021-03-26 16:43:55,026 [main] INFO  [com.demo.logaop.DemoSb08LogAopApplication] SpringApplication.java:662 - No active profile set, falling back to default profiles: default
+2021-03-26 16:43:55,761 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2021-03-26 16:43:55,767 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-03-26 16:43:55,768 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-03-26 16:43:55,820 [main] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/demo]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-03-26 16:43:55,820 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:289 - Root WebApplicationContext: initialization completed in 760 ms
+2021-03-26 16:43:55,986 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-26 16:43:56,160 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8080 (http) with context path '/demo'
+2021-03-26 16:43:56,167 [main] INFO  [com.demo.logaop.DemoSb08LogAopApplication] StartupInfoLogger.java:61 - Started DemoSb08LogAopApplication in 1.481 seconds (JVM running for 1.885)
+2021-03-26 16:44:38,797 [http-nio-8080-exec-1] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/demo]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-26 16:44:38,797 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2021-03-26 16:44:38,798 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 1 ms
+2021-03-26 16:46:47,208 [SpringContextShutdownHook] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:218 - Shutting down ExecutorService 'applicationTaskExecutor'

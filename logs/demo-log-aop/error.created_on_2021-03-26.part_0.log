@@ -1,0 +1,38 @@
+2021-03-26 16:43:32,548 [main] ERROR [org.springframework.boot.SpringApplication] SpringApplication.java:858 - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@8:77 - no applicable action for [rollingPolicy], current ElementPath  is [[configuration][appender][rollingPolicy]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@10:21 - no applicable action for [FileNamePattern], current ElementPath  is [[configuration][appender][rollingPolicy][FileNamePattern]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:16 - no applicable action for [maxHistory], current ElementPath  is [[configuration][appender][rollingPolicy][maxHistory]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@15:102 - no applicable action for [timeBasedFileNamingAndTriggeringPolicy], current ElementPath  is [[configuration][appender][rollingPolicy][timeBasedFileNamingAndTriggeringPolicy]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@17:18 - no applicable action for [maxFileSize], current ElementPath  is [[configuration][appender][rollingPolicy][timeBasedFileNamingAndTriggeringPolicy][maxFileSize]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:327)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:82)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:63)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:111)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:62)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at com.demo.logaop.DemoSb08LogAopApplication.main(DemoSb08LogAopApplication.java:10)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@8:77 - no applicable action for [rollingPolicy], current ElementPath  is [[configuration][appender][rollingPolicy]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@10:21 - no applicable action for [FileNamePattern], current ElementPath  is [[configuration][appender][rollingPolicy][FileNamePattern]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:16 - no applicable action for [maxHistory], current ElementPath  is [[configuration][appender][rollingPolicy][maxHistory]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@15:102 - no applicable action for [timeBasedFileNamingAndTriggeringPolicy], current ElementPath  is [[configuration][appender][rollingPolicy][timeBasedFileNamingAndTriggeringPolicy]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@17:18 - no applicable action for [maxFileSize], current ElementPath  is [[configuration][appender][rollingPolicy][timeBasedFileNamingAndTriggeringPolicy][maxFileSize]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:312)
+	... 18 common frames omitted
