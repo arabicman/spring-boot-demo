@@ -1,0 +1,13 @@
+2021-03-26 10:53:10.511  INFO 29148 --- [main] c.d.logback.DemoSb07LogbackApplication   : Starting DemoSb07LogbackApplication using Java 1.8.0_231 on LJX-Mac.local with PID 29148 (/Users/lijx/Documents/JAVA_Project/spring-boot-demo/demo-sb07-logback/target/classes started by lijx in /Users/lijx/Documents/JAVA_Project/spring-boot-demo)
+2021-03-26 10:53:10.514  INFO 29148 --- [main] c.d.logback.DemoSb07LogbackApplication   : No active profile set, falling back to default profiles: default
+2021-03-26 10:53:11.149  INFO 29148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-26 10:53:11.155  INFO 29148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-26 10:53:11.156  INFO 29148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-03-26 10:53:11.195  INFO 29148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/demo]   : Initializing Spring embedded WebApplicationContext
+2021-03-26 10:53:11.196  INFO 29148 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 643 ms
+2021-03-26 10:53:11.293  INFO 29148 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-26 10:53:11.404  INFO 29148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/demo'
+2021-03-26 10:53:11.410  INFO 29148 --- [main] c.d.logback.DemoSb07LogbackApplication   : Started DemoSb07LogbackApplication in 1.293 seconds (JVM running for 1.981)
+2021-03-26 10:53:11.412  INFO 29148 --- [main] c.d.logback.DemoSb07LogbackApplication   : Spring boot启动初始化了 132 个 Bean
+2021-03-26 10:53:11.413  WARN 29148 --- [main] c.d.logback.DemoSb07LogbackApplication   : Spring boot启动初始化了 132 个 Bean
+2021-03-26 10:57:04.069  INFO 29148 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

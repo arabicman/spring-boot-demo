@@ -16,6 +16,7 @@
         <module>demo-sb04-actuator</module>
         <module>demo-sb05-admin-client</module>
         <module>demo-sb06-admin-server</module>
+        <module>demo-sb07-logback</module>
 
     </modules>
 

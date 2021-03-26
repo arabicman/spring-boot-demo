@@ -212,9 +212,55 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 
-## 07. 
+## 07. 配置Logback
 
+(1) Initializr: **Web** + **Lombok**
 
+(2) 配置application.yml 以及 logback-spring.xml（下面仅为基本结构，参考源代码为主）
+
+```xml
+<configuration scan="true" scanPeriod="60 seconds" debug="false">  
+    <property name="glmapper-name" value="glmapper-demo" /> 
+    <contextName>${glmapper-name}</contextName> 
+        
+    <appender>
+       <!--xxxx具体功能-->
+    </appender>   
+    
+    <logger>
+        <!--引用appender-->
+    </logger>
+    
+    <root>             
+       <!--引用appender或者logger-->
+    </root>  
+</configuration> 
+```
+
+(3)SpringBootApplication类
+
+``` java
+@SpringBootApplication
+@Slf4j
+public class SpringBootDemoLogbackApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(SpringBootDemoLogbackApplication.class, args);
+		int length = context.getBeanDefinitionNames().length;
+		log.trace("Spring boot启动初始化了 {} 个 Bean", length);
+		log.debug("Spring boot启动初始化了 {} 个 Bean", length);
+		log.info("Spring boot启动初始化了 {} 个 Bean", length);
+		log.warn("Spring boot启动初始化了 {} 个 Bean", length);
+		log.error("Spring boot启动初始化了 {} 个 Bean", length);
+		try {
+			int i = 0;
+			int j = 1 / i;
+		} catch (Exception e) {
+			log.error("【SpringBootDemoLogbackApplication】启动异常：", e);
+		}
+	}
+}
+```
 
 
 

@@ -2,15 +2,17 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo-sb01-hello" />
         <module name="demo-sb05-admin-client" />
         <module name="demo-sb04-actuator" />
         <module name="demo-sb03-properties" />
+        <module name="demo-sb01-hello" />
         <module name="demo-sb06-admin-server" />
+        <module name="demo-sb07-logback" />
         <module name="demo-sb02-hello" />
       </profile>
     </annotationProcessing>
@@ -23,6 +25,7 @@
       <module name="demo-sb04-actuator" target="1.8" />
       <module name="demo-sb05-admin-client" target="1.8" />
       <module name="demo-sb06-admin-server" target="1.8" />
+      <module name="demo-sb07-logback" target="1.8" />
       <module name="spring-boot-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -35,6 +38,7 @@
       <module name="demo-sb04-actuator" options="" />
       <module name="demo-sb05-admin-client" options="" />
       <module name="demo-sb06-admin-server" options="" />
+      <module name="demo-sb07-logback" options="" />
     </option>
   </component>
 </project>
