@@ -272,6 +272,53 @@ public class SpringBootDemoLogbackApplication {
 
 (3) 创建aspectj package 并在其中创建AopLog.java
 
+``` java
+@Aspect
+@Component
+@Slf4j
+public class AopLog {
+    @Pointcut("execution(public * com.demo.logaop.controller.*Controller.*(..))")
+  
+    public void log() {  }
+
+    @Around("log()")
+    public Object aroundLog(ProceedingJoinPoint point) throws Throwable {
+
+        // 开始打印请求日志
+        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = Objects.requireNonNull(attributes).getRequest();
+
+        // 打印请求相关参数
+        long startTime = System.currentTimeMillis();
+        Object result = point.proceed();
+        String header = request.getHeader("User-Agent");
+        UserAgent userAgent = UserAgent.parseUserAgentString(header);
+
+        final Log l = Log.builder()
+                .threadId(Long.toString(Thread.currentThread().getId()))
+                .threadName(Thread.currentThread().getName())
+                .ip(getIp(request))
+                .url(request.getRequestURL().toString())
+                .classMethod(String.format("%s.%s", point.getSignature().getDeclaringTypeName(),
+                        point.getSignature().getName()))
+                .httpMethod(request.getMethod())
+                .requestParams(getNameAndValue(point))
+                .result(result)
+                .timeCost(System.currentTimeMillis() - startTime)
+                .userAgent(header)
+                .browser(userAgent.getBrowser().toString())
+                .os(userAgent.getOperatingSystem().toString()).build();
+
+        log.info("Request Log Info : {}", JSONUtil.toJsonStr(l));
+
+        return result;
+    }
+  //未完....
+}
+```
+
+
+
 (4) 创建controller package并创建TestController.java
 
 (5) 使用postman测试api	
