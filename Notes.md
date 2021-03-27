@@ -292,11 +292,64 @@ BODY-JSON:
 
 
 
-## 09. 
+## 09. Exception Handler异常统一处理
 
+两种方法：第一种对常见API形式的接口进行异常处理，统一封装返回格式；第二种是对模板页面请求的异常处理，统一处理错误页面。
 
+(1) Initializr: Spring Web + Thymeleaf + lombok
 
+(2) application.yml
 
+``` yml
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+spring:
+  thymeleaf:
+    cache: false
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+```
+
+(3) 创建error.htm并将Thymeleaf标签加到html中
+
+``` html
+<html xmlns:th="http://www.thymeleaf.org"> 
+```
+
+(4) 创建Status, ApiResponse, BaseException, JsonException, PageException类
+
+(5) 创建DemoExceptionHandler
+
+``` java
+@ControllerAdvice
+@Slf4j
+public class DemoExceptionHandler {
+    private static final String DEFAULT_ERROR_VIEW = "error";
+
+    @ExceptionHandler(value = JsonException.class)
+    @ResponseBody
+    public ApiResponse jsonErrorHandler(JsonException exception){
+        log.error("【JsonException】:{}", exception.getMessage());
+        return ApiResponse.ofException(exception);
+    }
+
+    @ExceptionHandler(value = PageException.class)
+    public ModelAndView pageErrorHandler(PageException exception){
+        log.error("【DemoPageException】:{}", exception.getMessage());
+        ModelAndView view = new ModelAndView();
+        view.addObject("message", exception.getMessage());
+        view.setViewName(DEFAULT_ERROR_VIEW);
+        return view;
+    }
+}
+```
+
+(6) 写Controller并运行
 
 ## 10. 
 

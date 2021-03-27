@@ -18,6 +18,7 @@
         <module>demo-sb06-admin-server</module>
         <module>demo-sb07-logback</module>
         <module>demo-sb08-log-aop</module>
+        <module>demo-sb09-exception-handler</module>
 
     </modules>
 
