@@ -277,8 +277,7 @@ public class SpringBootDemoLogbackApplication {
 @Component
 @Slf4j
 public class AopLog {
-    @Pointcut("execution(public * com.demo.logaop.controller.*Controller.*(..))")
-  
+    @Pointcut("execution(public * com.demo.logaop.controller.*Controller.*(..))") 
     public void log() {  }
 
     @Around("log()")
