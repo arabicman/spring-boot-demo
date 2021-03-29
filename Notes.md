@@ -397,11 +397,43 @@ public class DemoExceptionHandler {
 
 (6) 写Controller并运行
 
-## 10. 
+## 10. Thymeleaf模板
 
-test git
+(1) Initializr : web + thymeleaf + lombok
+
+(2)application.yml
+
+``` yml
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+spring:
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
+```
+
+(3) 创建User实体类
+
+(4) 创建两个controller： IndexController 和 UserController
+
+(5) 把<thymeleaf>标签写入html中
+
+``` html
+<form action="/demo/user/login" method="post">
+		用户名<input type="text" name="name" placeholder="用户名"/>
+		密码<input type="password" name="password" placeholder="密码"/>
+		<input type="submit" value="登录">
+	</form>
+```
 
 
+
+thymeleaf: https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html  
 
 ## 11. 
 

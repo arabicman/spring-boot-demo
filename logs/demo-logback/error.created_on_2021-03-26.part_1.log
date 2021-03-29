@@ -1,0 +1,6 @@
+2021-03-26 10:57:08.311 ERROR 29206 --- [main] c.d.logback.DemoSb07LogbackApplication   DemoSb07LogbackApplication.java:20: Spring boot启动初始化了 132 个 Bean
+2021-03-26 10:57:08.313 ERROR 29206 --- [main] c.d.logback.DemoSb07LogbackApplication   DemoSb07LogbackApplication.java:25: 【SpringBootDemoLogbackApplication】启动异常：
+
+java.lang.ArithmeticException: / by zero
+	at com.demo.logback.DemoSb07LogbackApplication.main(DemoSb07LogbackApplication.java:23)
+

@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/demo-sb07-logback/pom.xml" />
         <option value="$PROJECT_DIR$/demo-sb08-log-aop/pom.xml" />
         <option value="$PROJECT_DIR$/demo-sb09-exception-handler/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-sb10-thymeleaf/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

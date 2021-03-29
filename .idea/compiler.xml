@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo-sb05-admin-client" />
+        <module name="demo-sb10-thymeleaf" />
         <module name="demo-sb04-actuator" />
         <module name="demo-sb03-properties" />
         <module name="demo-sb08-log-aop" />
@@ -30,6 +31,7 @@
       <module name="demo-sb07-logback" target="1.8" />
       <module name="demo-sb08-log-aop" target="1.8" />
       <module name="demo-sb09-exception-handler" target="1.8" />
+      <module name="demo-sb10-thymeleaf" target="1.8" />
       <module name="spring-boot-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -45,6 +47,7 @@
       <module name="demo-sb07-logback" options="" />
       <module name="demo-sb08-log-aop" options="" />
       <module name="demo-sb09-exception-handler" options="" />
+      <module name="demo-sb10-thymeleaf" options="" />
     </option>
   </component>
 </project>

@@ -19,6 +19,7 @@
         <module>demo-sb07-logback</module>
         <module>demo-sb08-log-aop</module>
         <module>demo-sb09-exception-handler</module>
+        <module>demo-sb10-thymeleaf</module>
 
     </modules>
 
