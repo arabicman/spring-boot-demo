@@ -1,0 +1,11 @@
+2021-03-29 15:05:16,098 [main] INFO  [com.demo.logaop.DemoSb08LogAopApplication] StartupInfoLogger.java:55 - Starting DemoSb08LogAopApplication using Java 1.8.0_231 on LJX-Mac.local with PID 5578 (/Users/lijx/Documents/JAVA_Project/spring-boot-demo/demo-sb08-log-aop/target/classes started by lijx in /Users/lijx/Documents/JAVA_Project/spring-boot-demo)
+2021-03-29 15:05:16,100 [main] INFO  [com.demo.logaop.DemoSb08LogAopApplication] SpringApplication.java:662 - No active profile set, falling back to default profiles: default
+2021-03-29 15:05:16,882 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2021-03-29 15:05:16,888 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-03-29 15:05:16,888 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-03-29 15:05:16,932 [main] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/demo]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-03-29 15:05:16,932 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:289 - Root WebApplicationContext: initialization completed in 800 ms
+2021-03-29 15:05:17,116 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-29 15:05:17,267 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8080 (http) with context path '/demo'
+2021-03-29 15:05:17,274 [main] INFO  [com.demo.logaop.DemoSb08LogAopApplication] StartupInfoLogger.java:61 - Started DemoSb08LogAopApplication in 1.479 seconds (JVM running for 1.847)
+2021-03-29 15:05:24,650 [SpringContextShutdownHook] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:218 - Shutting down ExecutorService 'applicationTaskExecutor'
