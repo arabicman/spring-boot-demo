@@ -435,7 +435,7 @@ spring:
 
 thymeleaf: https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html  
 
-## 11. 
+## 11. JDBC Template
 
 
 
