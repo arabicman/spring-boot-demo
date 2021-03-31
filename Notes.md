@@ -435,9 +435,40 @@ spring:
 
 thymeleaf: https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html  
 
-## 11. JDBC Template
+## 11. Spring Data JPA
 
+(1) Initializr: Web + data jpa + mysql driver
 
+(2) application.properties
+
+``` properties
+#server
+server.port=8080
+server.servlet.context-path=/demo
+#data source
+spring.datasource.url= jdbc:mysql://localhost:3307/demodb?useSSL=false
+spring.datasource.username= root
+spring.datasource.password= 123456
+#jpa
+spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5InnoDBDialect
+spring.jpa.show-sql= true
+# Hibernate ddl auto (create, create-drop, 开发可用validate（帮助创建表）, 产品常用update)
+spring.jpa.hibernate.ddl-auto= update
+```
+
+(3) 创建实体类Tutorial
+
+(4) 创建TutorialRepository interface 继承 JpaRepository<T,R>
+
+``` java
+public interface TutorialRepository extends JpaRepository<Tutorial, Long> {
+    //已有实现方法：save(), getOne(), findById(), findAll(), count(), delete(), deleteById()
+    List<Tutorial> findByPublished(boolean published);
+    List<Tutorial> findByTitleContaining(String title);
+}
+```
+
+(5) 创建TutorialController(增删改查API)
 
 
 

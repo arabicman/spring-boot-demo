@@ -21,5 +21,7 @@
     <file url="file://$PROJECT_DIR$/demo-sb09-exception-handler/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-sb10-thymeleaf/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-sb10-thymeleaf/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-sb11-data-jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-sb11-data-jpa/src/main/resources" charset="UTF-8" />
   </component>
 </project>
