@@ -452,7 +452,7 @@ spring.datasource.password= 123456
 #jpa
 spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5InnoDBDialect
 spring.jpa.show-sql= true
-# Hibernate ddl auto (create, create-drop, 开发可用validate（帮助创建表）, 产品常用update)
+# Hibernate ddl auto (create, create-drop, 开发可用update（帮助创建表）, 产品常用validate)
 spring.jpa.hibernate.ddl-auto= update
 ```
 
