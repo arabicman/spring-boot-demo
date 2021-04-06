@@ -452,7 +452,7 @@ spring.datasource.password= 123456
 #jpa
 spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5InnoDBDialect
 spring.jpa.show-sql= true
-# Hibernate ddl auto (create, create-drop, 开发可用update（帮助创建表）, 产品常用validate)
+# Hibernate ddl auto (create, create-drop, 开发可用update（帮助创建表）, 产品常用validate
 spring.jpa.hibernate.ddl-auto= update
 ```
 
@@ -472,7 +472,85 @@ public interface TutorialRepository extends JpaRepository<Tutorial, Long> {
 
 
 
-## 12. 
+## 12. Redis缓存
+
+(1)Initializr: data-redis, commons-pool2, starter-json, guava, lombok
+
+(2)Application.yml
+
+``` yml
+spring:
+  redis:
+    host: localhost
+    # 连接超时时间（记得添加单位，Duration）
+    timeout: 10000ms
+    # Redis默认情况下有16个分片，这里配置具体使用的分片
+    # database: 0
+    lettuce:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制） 默认 8
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        max-wait: -1ms
+        # 连接池中的最大空闲连接 默认 8
+        max-idle: 8
+        # 连接池中的最小空闲连接 默认 0
+        min-idle: 0
+  cache:
+    # 一般来说是不用配置的，Spring Cache 会根据依赖的包自行装配
+    type: redis
+logging:
+  level:
+    com.demo: debug
+```
+
+(3) RedisConfig.java
+
+``` java
+@Configuration
+@AutoConfigureAfter(RedisAutoConfiguration.class)
+@EnableCaching
+public class RedisConfig {
+
+    /**
+     * 默认情况下的模板只能支持RedisTemplate<String, String>，也就是只能存入字符串，因此支持序列化
+     */
+    @Bean
+    public RedisTemplate<String, Serializable> redisCacheTemplate(LettuceConnectionFactory redisConnectionFactory) {
+        RedisTemplate<String, Serializable> template = new RedisTemplate<>();
+        template.setKeySerializer(new StringRedisSerializer());
+        template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        template.setConnectionFactory(redisConnectionFactory);
+        return template;
+    }
+
+    /**
+     * 配置使用注解的时候缓存配置，默认是序列化反序列化的形式，加上此配置则为 json 形式
+     */
+    @Bean
+    public CacheManager cacheManager(RedisConnectionFactory factory) {
+        // 配置序列化
+        RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig();
+        RedisCacheConfiguration redisCacheConfiguration = config
+          .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer()))
+         .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(new GenericJackson2JsonRedisSerializer()));
+
+        return RedisCacheManager.builder(factory).cacheDefaults(redisCacheConfiguration).build();
+    }
+}
+```
+
+(4) Cache注解
+
+``` java
+@Cacheable(value = "user", key = "#id")
+@CachePut(value = "user", key = "#user.id")
+@CacheEvict(value = "user", key = "#id")
+```
+
+
+
+
 
 
 

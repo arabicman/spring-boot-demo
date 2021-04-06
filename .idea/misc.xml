@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/demo-sb09-exception-handler/pom.xml" />
         <option value="$PROJECT_DIR$/demo-sb10-thymeleaf/pom.xml" />
         <option value="$PROJECT_DIR$/demo-sb11-data-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-sb12-cache-redis/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -22,7 +23,7 @@
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

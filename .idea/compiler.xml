@@ -16,6 +16,7 @@
         <module name="demo-sb09-exception-handler" />
         <module name="demo-sb06-admin-server" />
         <module name="demo-sb11-data-jpa" />
+        <module name="demo-sb12-cache-redis" />
         <module name="demo-sb07-logback" />
         <module name="demo-sb02-hello" />
       </profile>
@@ -34,6 +35,7 @@
       <module name="demo-sb09-exception-handler" target="1.8" />
       <module name="demo-sb10-thymeleaf" target="1.8" />
       <module name="demo-sb11-data-jpa" target="1.8" />
+      <module name="demo-sb12-cache-redis" target="1.8" />
       <module name="spring-boot-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -51,6 +53,7 @@
       <module name="demo-sb09-exception-handler" options="" />
       <module name="demo-sb10-thymeleaf" options="" />
       <module name="demo-sb11-data-jpa" options="" />
+      <module name="demo-sb12-cache-redis" options="" />
     </option>
   </component>
 </project>

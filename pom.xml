@@ -21,6 +21,7 @@
         <module>demo-sb09-exception-handler</module>
         <module>demo-sb10-thymeleaf</module>
         <module>demo-sb11-data-jpa</module>
+        <module>demo-sb12-cache-redis</module>
 
     </modules>
 
